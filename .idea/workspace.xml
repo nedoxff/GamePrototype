@@ -50,121 +50,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6790f98f-ef64-468d-89c2-469c1bd8e661" name="Changes" comment="🎉 Re-create the git repository&#10;&#10;Currently, has these features implemented: State Machine, UI objects (including ProgressBars &amp; Video Player), Animations, Cursor Packs, Resource Management">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/GamePrototype.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMakeFiles/3.23.0-rc4/CMakeSystem.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMakeFiles/3.23.0-rc4/VCTargetsPath.vcxproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Engine.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Engine.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Logger.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Logger.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/ResourceManager.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/ResourceManager.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Settings/Config.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Settings/Config.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Settings/CursorPack.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Settings/CursorPack.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Settings/StringsManager.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Settings/StringsManager.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/State.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/State.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dependencies/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/Concepts.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/CursorHelper.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/CursorHelper.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/DrawableHelper.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/DrawableHelper.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/EngineHelper.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/EngineHelper.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/ObjectHelper.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/Random.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/RenderTextureHelper.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/RenderTextureHelper.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/Scheduler.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/Scheduler.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/WindowsHelper.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helpers/WindowsHelper.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Documents/Animations/Button_OK_Pressed.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Documents/Config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Documents/CursorPacks/CursorPack_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Documents/Windows/Window_Login.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Documents/en/Strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Documents/ru/Strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Fonts/95.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Fonts/dos.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Fonts/gothic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Fonts/leto.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Shaders/BarrelFishEyeF.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Shaders/Default.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Shaders/GaussianBlurF.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Shaders/GlowF.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Textures/BG/Menu_Background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Textures/Cursors/Default/Cursor_Default_Busy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Textures/Cursors/Default/Cursor_Default_Default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Textures/Cursors/Default/Cursor_Default_Loading.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Textures/Icons/exe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Textures/Icons/exegear.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Textures/UI/Buttons/OK/OK_Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Textures/UI/Buttons/OK/OK_Pressed_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Textures/UI/Buttons/OK/OK_Pressed_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Textures/UI/Buttons/OK/OK_Pressed_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Textures/UI/Login/Login_Window.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Textures/Windows/C.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Textures/Windows/CSelected.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Textures/test.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Videos/Boot.webm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/States/BootingState.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/States/BootingState.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/States/MenuState.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/States/MenuState.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/States/Tests/AnimationState.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/States/Tests/AnimationState.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/States/Windows/LoginState.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/States/Windows/LoginState.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/AnimatedText.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/AnimatedText.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/Animation.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/Animation.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/Fade.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/Fade.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/ProgressBar/NormalProgressBar.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/ProgressBar/ProgressBarBase.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/ProgressBar/VerticalProgressBar.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/Window/Window.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/Window/Window.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Motion-d.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/avcodec-58.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/avdevice-58.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/avfilter-7.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/avformat-58.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/avutil-56.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libImGui-SFML_d.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libatomic-1.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libgcc_s_seh-1.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libgomp-1.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libpugixml.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libspdlogd.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libssp-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libstdc++-6.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libwinpthread-1.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/openal32.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/postproc-55.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/sfml-audio-d-2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/sfml-graphics-d-2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/sfml-system-d-2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/sfml-window-d-2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/swresample-3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/swscale-5.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="6790f98f-ef64-468d-89c2-469c1bd8e661" name="Changes" comment="🐛 Exclude .idea from git" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -462,8 +348,30 @@
       <workItem from="1648454951956" duration="35000" />
       <workItem from="1648454990031" duration="15110000" />
       <workItem from="1648491014721" duration="1320000" />
-      <workItem from="1648550663927" duration="1116000" />
+      <workItem from="1648550663927" duration="1431000" />
     </task>
+    <task id="LOCAL-00001" summary="🎉 Re-create the git repository&#10;&#10;Currently, has these features implemented: State Machine, UI objects (including ProgressBars &amp; Video Player), Animations, Cursor Packs, Resource Management">
+      <created>1648553113600</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648553113600</updated>
+    </task>
+    <task id="LOCAL-00002" summary="🐛 Exclude CMakeFiles from git">
+      <created>1648553255465</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1648553255465</updated>
+    </task>
+    <task id="LOCAL-00003" summary="🐛 Exclude .idea from git">
+      <created>1648553282765</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1648553282765</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,6 +412,8 @@
       <path value="$PROJECT_DIR$/cmake-build-debug/_deps/tweeny-src" />
     </ignored-roots>
     <MESSAGE value=" Re-create the git repository&#10;&#10;Currently, has these features implemented: State Machine, UI objects (including ProgressBars &amp; Video Player), Animations, Cursor Packs, Resource Management" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Re-create the git repository&#10;&#10;Currently, has these features implemented: State Machine, UI objects (including ProgressBars &amp; Video Player), Animations, Cursor Packs, Resource Management" />
+    <MESSAGE value=" Exclude CMakeFiles from git" />
+    <MESSAGE value=" Exclude .idea from git" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Exclude .idea from git" />
   </component>
 </project>
