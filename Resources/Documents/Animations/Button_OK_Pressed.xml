@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<Animation Mode="Rectangle">
-    <Frame Duration="450" Texture="OK_Idle"/>
-    <Frame Duration="450" Texture="OK_Pressed_1"/>
-    <Frame Duration="450" Texture="OK_Pressed_2"/>
-    <Frame Duration="450" Texture="OK_Pressed_3"/>
-</Animation>
