@@ -37,7 +37,7 @@ void AnimatedText::Animate(const std::string &target, int time, const std::strin
 
 
 	tween = tweeny::from(0).to(targetText.size()).during(time).via(easing);
-	tween.onStep([=](int v){
+	tween.onStep([this](int v){
 		text.setString(startText + targetText.substr(0, v));
 		if(center)
 			ObjectHelper::Center(text, viewSize, centerX, centerY);

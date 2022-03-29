@@ -36,11 +36,11 @@ void BootingState::Start() {
 
 	bootSource->Play();
 
-	scheduler.Schedule(sf::milliseconds(FIRST_EVENT), [=](){
+	scheduler.Schedule(sf::milliseconds(FIRST_EVENT), [this](){
 		tweenUpdate = true;
 		titleText.setString("_ned0programmer");
 		tween = tweeny::from(0).to(255).during(2500);
-		tween.onStep([=](int v){
+		tween.onStep([this](int v){
 			titleText.setFillColor({255, 255, 255, static_cast<unsigned char>(v)});
 			titleText.setOutlineColor({0, 0, 0, static_cast<unsigned char>(v)});
 			if(v == 255)
@@ -52,15 +52,15 @@ void BootingState::Start() {
 		});
 	});
 
-	scheduler.Schedule(sf::milliseconds(SECOND_EVENT), [=](){
+	scheduler.Schedule(sf::milliseconds(SECOND_EVENT), [this](){
 		titleText.setString("some random quote");
 		ObjectHelper::Center(titleText, ViewSize);
 	});
 
-	scheduler.Schedule(sf::milliseconds(THIRD_EVENT), [=](){
+	scheduler.Schedule(sf::milliseconds(THIRD_EVENT), [this](){
 		tweenUpdate = true;
 		tween = tweeny::from(255).to(0).during(5000);
-		tween.onStep([=](int v){
+		tween.onStep([this](int v){
 			titleText.setFillColor({255, 255, 255, static_cast<unsigned char>(v)});
 			titleText.setOutlineColor({0, 0, 0, static_cast<unsigned char>(v)});
 			if(v == 0)
