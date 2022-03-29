@@ -46,7 +46,7 @@ FetchContent_MakeAvailable(tweeny)
 FetchContent_Declare(
         motion
         GIT_REPOSITORY https://github.com/NedoProgrammer/MotionPP
-        GIT_TAG 1fca1f770c902525f5ca4fe5c0464b8d7b8abd2b
+        GIT_TAG a3df2e8a054b5b6348a3fcc85802ef41f66d020e
 )
 message(STATUS "Fetching Motion..")
 set(FFMPEG_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../ffmpeg")
