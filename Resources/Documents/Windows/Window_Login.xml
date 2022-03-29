@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Window SizeX="489" SizeY="157">
+    <Image Texture="Login_Window"/>
+    <Button Texture="OK_Idle" Clicked="OK_Clicked" ClickedAnimation="Button_OK_Pressed"/>
+</Window>

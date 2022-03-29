@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<CursorPack Name="Default">
+    <Arrow HotspotX="0" HotspotY="0">Cursor_Default_Default</Arrow>
+    <ArrowWait HotspotX="0" HotspotY="0">Cursor_Default_Loading</ArrowWait>
+    <Wait HotspotX="0" HotspotY="0">Cursor_Default_Busy</Wait>
+</CursorPack>

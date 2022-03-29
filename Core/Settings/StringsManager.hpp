@@ -1,0 +1,14 @@
+//
+// Created by nedo on 22.03.2022.
+//
+
+#ifndef GAMEPROTOTYPE_STRINGSMANAGER_HPP
+#define GAMEPROTOTYPE_STRINGSMANAGER_HPP
+
+
+class StringsManager {
+
+};
+
+
+#endif //GAMEPROTOTYPE_STRINGSMANAGER_HPP
