@@ -19,7 +19,7 @@ void Scheduler::Schedule(sf::Time after, const std::function<void()> &callback) 
 
 void Scheduler::Update(sf::Time delta) {
 	std::unordered_map<int, SchedulerTask> completed;
-	std::ranges::copy_if(tasks.begin(), tasks.end(), std::inserter(completed, completed.begin()), [=](const std::pair<int, SchedulerTask>& p){
+	std::ranges::copy_if(tasks.begin(), tasks.end(), std::inserter(completed, completed.begin()), [this](const std::pair<int, SchedulerTask>& p){
 		return p.second.After.asMilliseconds() <= current;
 	});
 	for(auto& p: completed)
