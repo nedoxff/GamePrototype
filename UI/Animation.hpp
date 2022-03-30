@@ -26,7 +26,6 @@ public:
 	void Update(sf::Time delta);
 	void Play();
 	void Pause();
-
 	void SetLoop(bool loop);
 	void SetFrame(int index);
 
