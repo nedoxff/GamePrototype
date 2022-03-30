@@ -44,5 +44,4 @@ void Scheduler::Schedule(const std::function<void()> &callback) {
 	task.After = after + currentTime;
 	tasks[id] = task;
 	SPDLOG_DEBUG("Scheduling function No.{} after {}ms (+{}ms from start)", id, task.After.asMilliseconds(), currentTime.asMilliseconds());
-	//if(tasks.empty())
 }

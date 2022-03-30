@@ -13,10 +13,6 @@ void Logger::Initialize() {
 	auto logger = std::make_shared<spdlog::logger>("file & console", list);
 	spdlog::set_default_logger(logger);
 	spdlog::set_pattern("(%D %T) %^[%l / %!():%#]%$ %v");
-	spdlog::set_error_handler([](const std::string &msg) {
-		std::cerr << "SPDLOG_ERROR was called: " << msg << std::endl;
-		throw std::runtime_error(msg);
-	});
 #ifdef DEBUG
 	spdlog::set_level(spdlog::level::debug);
 #else

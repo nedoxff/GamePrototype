@@ -41,7 +41,7 @@ private:
 		SPDLOG_DEBUG("Searching for resource \"{}\" ({})", resourceName, resourceType);
 		auto result = FindFile(resourceName, possibleExtensions);
 		if(!result.has_value())
-			throw std::runtime_error(fmt::format("Could not find {} with name \"{}\"!", resourceType, resourceName));
+			SPDLOG_WARN("Could not find {} with name \"{}\"!", resourceType, resourceName);
 		else
 			loader(*result);
 

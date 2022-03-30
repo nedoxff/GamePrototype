@@ -7,10 +7,8 @@
 
 #include <imgui-SFML.h>
 
-Engine::Engine(unsigned int width, unsigned int height, const std::string &title, unsigned int style) {
-	window = std::make_unique<sf::RenderWindow>(sf::VideoMode(width, height), title, style);
-	window->setFramerateLimit(60);
-	SPDLOG_INFO("Created new window. Size: {}x{} | Title: \"{}\" | Style: {}", width, height, title, style);
+Engine::Engine() {
+	Logger::Initialize();
 
 	resourceManager = std::make_shared<ResourceManager>("Resources");
 	SPDLOG_DEBUG("Resource Manager initialized");
@@ -30,13 +28,23 @@ Engine::Engine(unsigned int width, unsigned int height, const std::string &title
 		SPDLOG_DEBUG("Loaded config");
 	}
 
-	ImGui::SFML::Init(*window);
-	SPDLOG_DEBUG("ImGui-SFML initialized");
+	SPDLOG_INFO("Engine initialized");
 }
 
 Engine::~Engine() {
-	ImGui::SFML::Shutdown();
-	SPDLOG_DEBUG("ImGui-SFML disabled");
+	if(window) {
+		ImGui::SFML::Shutdown();
+		SPDLOG_DEBUG("ImGui-SFML disabled");
+	}
+}
+
+void Engine::CreateWindow(unsigned int width, unsigned int height, const std::string &title, unsigned int style) {
+	window = std::make_unique<sf::RenderWindow>(sf::VideoMode(width, height), title, style);
+	window->setFramerateLimit(60);
+	SPDLOG_INFO("Created new window. Size: {}x{} | Title: \"{}\" | Style: {}", width, height, title, style);
+
+	ImGui::SFML::Init(*window);
+	SPDLOG_DEBUG("ImGui-SFML initialized");
 }
 
 const std::shared_ptr<ResourceManager> &Engine::GetResourceManager() const {
@@ -45,11 +53,6 @@ const std::shared_ptr<ResourceManager> &Engine::GetResourceManager() const {
 
 void Engine::Tick() {
 	ProcessStateMachine();
-
-	/*if(!state) {
-		SPDLOG_CRITICAL("Cannot run the engine without a state!");
-		std::exit(1);
-	}*/
 
 	sf::Event event{};
 	while(window->pollEvent(event))

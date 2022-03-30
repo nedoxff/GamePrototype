@@ -71,7 +71,6 @@ void Animation::Update(sf::Time delta) {
 		else {
 			playing = loop;
 			if(loop) frameIndex = 0;
-			//return;
 		}
 		SetFrame(frameIndex);
 	}

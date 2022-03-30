@@ -15,9 +15,10 @@
 
 class Engine {
 public:
-	Engine(unsigned int width, unsigned int height, const std::string& title, unsigned int style = sf::Style::Close);
+	Engine();
 	~Engine();
 
+	void CreateWindow(unsigned int width, unsigned int height, const std::string& title, unsigned int style = sf::Style::Close);
 
 	template<Derived<State> T>
 	void AddState(bool replacing = false)
@@ -41,6 +42,8 @@ public:
 
 	void Start()
 	{
+		if(!window)
+			throw std::runtime_error("Cannot start game loop without a window!");
 		SPDLOG_INFO("Starting game loop");
 		while(window->isOpen()) Tick();
 	}
