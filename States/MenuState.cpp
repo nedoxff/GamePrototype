@@ -6,6 +6,7 @@
 #include "../Helpers/DrawableHelper.hpp"
 #include "../Helpers/CursorHelper.hpp"
 #include "Tests/AnimationState.hpp"
+#include "Tests/WindowState.hpp"
 
 void MenuState::Start() {
 	screen.setSize({1280, 720});
@@ -23,10 +24,9 @@ void MenuState::Start() {
 void MenuState::Update(sf::Time delta) {
 
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-	{
-		EnginePtr->AddState<AnimationState>();
-		EnginePtr->PopState();
-	}
+		EnginePtr->AddState<AnimationState>(true);
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+		EnginePtr->AddState<WindowState>(true);
 
 	screenTexture = DrawableHelper::DrawWithShaders({&background}, {fishEyeShader}, ViewSize);
 	screen.setTexture(&screenTexture);

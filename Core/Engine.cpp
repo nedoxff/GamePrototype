@@ -57,6 +57,9 @@ void Engine::Tick() {
 	sf::Event event{};
 	while(window->pollEvent(event))
 	{
+		if(!states.empty())
+			GetActiveState()->ProcessEvent(*this, event);
+
 		ImGui::SFML::ProcessEvent(event);
 
 		if(event.type == sf::Event::Closed)

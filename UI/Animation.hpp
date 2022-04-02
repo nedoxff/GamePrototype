@@ -35,6 +35,8 @@ public:
 
 	[[nodiscard]] bool IsLoop() const;
 
+	std::shared_ptr<sf::Shape> &GetShape();
+
 private:
 
 	friend class AnimationState;

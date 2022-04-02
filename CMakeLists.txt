@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_FLAGS_DEBUG "-DDEBUG")
 
 # MSVC stuff
-set(CMAKE_CXX_FLAGS "/EHa")
+set(CMAKE_CXX_FLAGS "/EHa /DEBUG")
 
 # GCC stuff
 # set(CMAKE_CXX_FLAGS "-g")

@@ -114,3 +114,7 @@ bool Animation::IsLoop() const {
 void Animation::Pause() {
 	playing = false;
 }
+
+std::shared_ptr<sf::Shape> &Animation::GetShape() {
+	return shape;
+}

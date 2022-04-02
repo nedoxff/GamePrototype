@@ -15,6 +15,7 @@ public:
 	virtual void Start() = 0;
 	virtual void Update(sf::Time delta) = 0;
 	virtual std::string GetName() = 0;
+	virtual void ProcessEvent(Engine& engine, sf::Event& event) {}
 protected:
 	std::shared_ptr<ResourceManager> Resources;
 	sf::Vector2f ViewSize;
