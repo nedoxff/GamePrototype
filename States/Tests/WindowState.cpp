@@ -26,8 +26,8 @@ void WindowState::Update(sf::Time delta) {
 		}
 		catch(std::runtime_error& err)
 		{
-			SPDLOG_ERROR("Failed to load animation for AnimationState: {}", err.what());
-			info = "Failed to load animation: " + std::string(err.what());
+			SPDLOG_ERROR("Failed to load window information for WindowState: {}", err.what());
+			info = "Failed to load window UI: " + std::string(err.what());
 			infoColor = {1, 0, 0, 1};
 		}
 	}
