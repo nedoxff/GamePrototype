@@ -10,6 +10,7 @@
 #include <memory>
 #include <SFML/Window.hpp>
 #include <iostream>
+#include <unordered_map>
 
 class ResourceManager;
 class CursorPack {

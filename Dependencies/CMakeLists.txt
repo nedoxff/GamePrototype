@@ -3,7 +3,7 @@ include(FetchContent)
 FetchContent_Declare(
         sfml
         GIT_REPOSITORY "https://github.com/SFML/SFML"
-        GIT_TAG 3315456dc32e2da000145bb7f97083154806b59b
+        GIT_TAG 8838030d67e1ba9ad3895e650c5d110f11c0450e
 )
 message(STATUS "Fetching SFML..")
 FetchContent_MakeAvailable(sfml)
@@ -46,7 +46,7 @@ FetchContent_MakeAvailable(tweeny)
 FetchContent_Declare(
         motion
         GIT_REPOSITORY https://github.com/NedoProgrammer/MotionPP
-        GIT_TAG a3df2e8a054b5b6348a3fcc85802ef41f66d020e
+        GIT_TAG fc3723db02256469d2fdabf87842a1bbb72a6847
 )
 message(STATUS "Fetching Motion..")
 set(FFMPEG_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../ffmpeg")
