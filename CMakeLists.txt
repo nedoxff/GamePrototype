@@ -5,15 +5,15 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_FLAGS_DEBUG "-DDEBUG")
 
 # MSVC stuff
-set(CMAKE_CXX_FLAGS "/EHa /DEBUG")
+set(CMAKE_CXX_FLAGS "/EHa /ZI")
 
 # GCC stuff
 # set(CMAKE_CXX_FLAGS "-g")
 
 add_subdirectory(Dependencies)
 
-file(GLOB_RECURSE FILES Core/* Helpers/* States/* UI/*)
-add_executable(GamePrototype ${FILES} main.cpp)
+file(GLOB_RECURSE FILES Core/* Helpers/* States/* UI/* Extensions/*)
+add_executable(GamePrototype ${FILES} main.cpp Helpers/Updateable.hpp)
 
 target_link_libraries(GamePrototype ImGui-SFML::ImGui-SFML sfml-graphics sfml-audio sfml-system sfml-window spdlog tweeny Motion pugixml)
 

@@ -76,7 +76,7 @@ void AnimationState::Update(sf::Time delta) {
 }
 
 std::string AnimationState::GetName() {
-	return "[Testing] Animation State";
+	return "[Debug] Animation State";
 }
 
 void AnimationState::draw(sf::RenderTarget &target, sf::RenderStates states) const {

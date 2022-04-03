@@ -5,8 +5,7 @@
 #include "MenuState.hpp"
 #include "../Helpers/DrawableHelper.hpp"
 #include "../Helpers/CursorHelper.hpp"
-#include "Tests/AnimationState.hpp"
-#include "Tests/WindowState.hpp"
+#include "Tests/DebugState.hpp"
 
 void MenuState::Start() {
 	screen.setSize({1280, 720});
@@ -23,10 +22,8 @@ void MenuState::Start() {
 
 void MenuState::Update(sf::Time delta) {
 
-	if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-		EnginePtr->AddState<AnimationState>(true);
-	if(sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-		EnginePtr->AddState<WindowState>(true);
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::LShift) && sf::Keyboard::isKeyPressed(sf::Keyboard::LControl) && sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+		EnginePtr->AddState<DebugState>(true);
 
 	screenTexture = DrawableHelper::DrawWithShaders({&background}, {fishEyeShader}, ViewSize);
 	screen.setTexture(&screenTexture);

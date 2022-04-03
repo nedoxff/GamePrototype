@@ -46,6 +46,5 @@ void WindowsHelper::OnStartup() {
 }
 
 void WindowsHelper::OnShutdown() {
-	if(GetPrimaryMonitorSize().second.y < 720)
-		ShowTaskBar(true);
+	//TODO
 }

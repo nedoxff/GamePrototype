@@ -15,6 +15,10 @@ void Animation::Load(const std::shared_ptr<ResourceManager>& manager, const std:
 		throw std::runtime_error("Failed to load animation information from \"" + path + "\"!");
 
 	auto root = document.child("Animation");
+
+	if(root.empty())
+		throw std::runtime_error("Animation information must have an \"Animation\" object as root!");
+
 	auto mode = std::string(root.attribute("Mode").as_string("Rectangle"));
 
 	if(mode == "Rectangle")
@@ -24,7 +28,7 @@ void Animation::Load(const std::shared_ptr<ResourceManager>& manager, const std:
 		if(sizeX == -1 || sizeY == -1)
 		{
 			shape = std::make_unique<sf::RectangleShape>();
-			SPDLOG_WARN("SizeX or SizeY not specified for \"Rectangle\" mode, defaulting to texture size.");
+			SPDLOG_WARN("SizeX or SizeY not specified for \"Rectangle\" mode, defaulting to texture size");
 			useTextureSize = true;
 		}
 		else

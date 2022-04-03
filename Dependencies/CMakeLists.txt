@@ -11,7 +11,7 @@ FetchContent_MakeAvailable(sfml)
 FetchContent_Declare(
         imgui
         GIT_REPOSITORY https://github.com/ocornut/imgui
-        GIT_TAG 35b1148efb839381b84de9290d9caf0b66ad7d03
+        GIT_TAG f5c5926fb91764c2ec0e995970818d79b5873d42
 )
 message(STATUS "Fetching ImGui..")
 FetchContent_MakeAvailable(imgui)

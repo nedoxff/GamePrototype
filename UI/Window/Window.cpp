@@ -21,6 +21,9 @@ void Window::Load(std::shared_ptr<ResourceManager>& manager, const std::string& 
 
 	auto root = document.child("Window");
 
+	if(root.empty())
+		throw std::runtime_error("Window information must have a \"Window\" object as root!");
+
 	auto baseNode = root.child("Base");
 	if(baseNode.empty())
 		throw std::runtime_error("Window must have a Base element!");
@@ -35,7 +38,7 @@ void Window::Load(std::shared_ptr<ResourceManager>& manager, const std::string& 
 
 	if(sizeX == -1 || sizeY == -1)
 	{
-		SPDLOG_WARN("One of properties (SizeX or SizeY) was not specified. Using texture size instead.");
+		SPDLOG_WARN("One of properties (SizeX or SizeY) was not specified. Using texture size instead");
 		base.setSize(static_cast<sf::Vector2f>(base.getTexture()->getSize()));
 	}
 	else

@@ -42,7 +42,7 @@ void WindowState::Update(sf::Time delta) {
 	{
 		if(TreeNode("Base"))
 		{
-			Text("Texture (current): %fx%f", window.base.getSize().x, window.base.getSize().y);
+			Text("Texture (current): %ux%u", static_cast<unsigned int>(window.base.getSize().x), static_cast<unsigned int>(window.base.getSize().y));
 			Image(*window.base.getTexture());
 			TreePop();
 		}
@@ -79,7 +79,7 @@ void WindowState::Update(sf::Time delta) {
 }
 
 std::string WindowState::GetName() {
-	return "[Testing] Window UI State";
+	return "[Debug] Window UI State";
 }
 
 void WindowState::draw(sf::RenderTarget &target, sf::RenderStates states) const {

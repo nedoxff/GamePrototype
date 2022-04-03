@@ -62,9 +62,13 @@ void Engine::Tick() {
 
 		ImGui::SFML::ProcessEvent(event);
 
-		if(event.type == sf::Event::Closed)
+		switch(event.type)
 		{
-			window->close();
+			case sf::Event::Closed:
+			{
+				window->close();
+				break;
+			}
 		}
 	}
 	auto delta = deltaClock.restart();
