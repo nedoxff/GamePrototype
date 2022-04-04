@@ -15,6 +15,7 @@ public:
 	std::string GetName() override;
 	void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
+	
 private:
 	sf::RectangleShape screen;
 	sf::Texture screenTexture;

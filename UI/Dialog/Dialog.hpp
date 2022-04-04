@@ -8,10 +8,11 @@
 #include <SFML/Graphics.hpp>
 #include "../../Core/ResourceManager.hpp"
 #include "../../Extensions/RoundedRectangleShape.hpp"
+#include "../../Helpers/Updateable.hpp"
 #include "DialogBit.hpp"
 #include <tweeny.h>
 
-class Dialog: public sf::Drawable {
+class Dialog: public sf::Drawable, public Updateable {
 public:
 	explicit Dialog(sf::Vector2f viewSize);
 	Dialog() = default;
@@ -21,6 +22,8 @@ public:
 	bool IsPlaying() const;
 	void Pause();
 	void Play();
+
+	void Update(sf::Time delta) override;
 
 private:
 	enum DialogState
@@ -39,7 +42,7 @@ private:
 
 	float animationSpeed;
 
-	tweeny::tween<float> scaleTween;
+	tweeny::tween<float, float> scaleTween;
 	sf::RoundedRectangleShape mainBox;
 	sf::RoundedRectangleShape speakerBox;
 	sf::RectangleShape speaker;

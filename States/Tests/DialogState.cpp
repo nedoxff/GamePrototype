@@ -11,6 +11,8 @@ void DialogState::Start() {
 }
 
 void DialogState::Update(sf::Time delta) {
+	if(dialog.IsPlaying())
+		dialog.Update(delta);
 
 	Begin("Dialog UI Debug Window");
 

@@ -4,7 +4,7 @@
 
 #ifndef GAMEPROTOTYPE_UPDATEABLE_HPP
 #define GAMEPROTOTYPE_UPDATEABLE_HPP
-#include "../Core/Engine.hpp"
+class Engine;
 
 class Updateable
 {

@@ -7,6 +7,8 @@
 #include <pugixml.hpp>
 using namespace pugi;
 
+#include "../../Helpers/ObjectHelper.hpp"
+
 #define X_OFFSET 20
 #define Y_OFFSET 20
 #define HEIGHT_FACTOR 3.5f
@@ -84,7 +86,11 @@ void Dialog::Play() {
 	playing = true;
 	state = AnimationStart;
 
-	scaleTween = tweeny::from(0.f).to(1.f).via(tweeny::easing::quadraticInOut).during(750 * animationSpeed);
+	scaleTween = tweeny::from(0.f, 0.f).to(1.f, 1.f).via(tweeny::easing::quadraticInOut).during(static_cast<int>(750 * animationSpeed), static_cast<int>(750 * (animationSpeed - 0.2f)));
+	scaleTween.onStep([this](float h, float v){
+		mainBox.setScale({h, v});
+		return h == 1.f && v == 1.f;
+	});
 }
 
 Dialog::Dialog(sf::Vector2f viewSize) {
@@ -95,11 +101,32 @@ Dialog::Dialog(sf::Vector2f viewSize) {
 	mainBox.setCornersRadius(5.f);
 	mainBox.setCornerPointCount(30);
 
+	ObjectHelper::CenterOrigin(mainBox);
+
 	auto bounds = mainBox.getGlobalBounds();
-	mainBox.setPosition({X_OFFSET, viewSize.y - bounds.height - Y_OFFSET});
+	mainBox.setPosition({X_OFFSET + bounds.width / 2.f, viewSize.y - bounds.height / 2.f - Y_OFFSET});
 	mainBox.setScale({0, 0});
 }
 
 void Dialog::Pause() {
 	playing = false;
+}
+
+void Dialog::Update(sf::Time delta) {
+	if(!loaded) return;
+	switch(state)
+	{
+		case Idle:
+			break;
+		case AnimationStart: {
+			scaleTween.step(delta.asMilliseconds());
+			break;
+		}
+		case TypingText:
+			break;
+		case WaitingForInput:
+			break;
+		case AnimationEnd:
+			break;
+	}
 }
